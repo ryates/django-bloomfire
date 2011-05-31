@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style type="text/css">
+        #bloomfire_error .error_message { color: #666; }
+    </style>
+    <div id="bloomfire_error">
+        <h1>Something Unexpected Happened</h1>
+        <p>
+            We ran into a problem trying to send you off to our partner Bloomfire site.  
+            The message that we got back was: <span class="error_message">{{ error_message }}</span>
+        </p>
+        <p>
+            If you continue to have problems, please contact us for help at: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>
+        </p>
+    </div>
+{% endblock %}
